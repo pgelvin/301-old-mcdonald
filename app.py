@@ -23,47 +23,6 @@ sourceurl = 'https://plot.ly/python/choropleth-maps/'
 # githublink = 'https://github.com/austinlasseter/dash-map-usa-agriculture' # this is the original repo
 githublink = 'https://github.com/pgelvin/301-old-mcdonald.git'
 
-########## Set up the dropdown box
-import plotly.graph_objects as go
-import numpy as np
-  
-# creating random data through randomint
-# function of numpy.random
-np.random.seed(42)
-  
-random_x = np.random.randint(1, 101, 100)
-random_y = np.random.randint(1, 101, 100)
-  
-plot = go.Figure(data=[go.Scatter(
-    x=random_x,
-    y=random_y,
-    mode='markers',)
-])
-  
-# Add dropdown
-plot.update_layout(
-    updatemenus=[
-        dict(
-            buttons=list([
-                dict(
-                    args=["type", "scatter"],
-                    label="Scatter Plot",
-                    method="restyle"
-                ),
-                dict(
-                    args=["type", "bar"],
-                    label="Bar Chart",
-                    method="restyle"
-                )
-            ]),
-            direction="down",
-        ),
-    ]
-)
-  
-plot.show()
-########## End of the dropdown box code
-
 ########## Set up the chart
 import pandas as pd
 df = pd.read_csv('assets/usa-2011-agriculture.csv')
@@ -88,6 +47,10 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 server = app.server
 app.title=tabtitle
+
+########## Set up the dropdown box
+
+########## End of the dropdown box code
 
 ########### Set up the layout
 
