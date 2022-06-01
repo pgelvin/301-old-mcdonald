@@ -10,9 +10,9 @@ import pandas as pd
 
 ########### Define your variables ######
 
-tabtitle = 'Old McDonald'
+tabtitle = 'Old McDonald - Pat Gelvin'
 sourceurl = 'https://plot.ly/python/choropleth-maps/'
-githublink = 'https://github.com/austinlasseter/agriculture-exports-map'
+githublink = 'https://github.com/pgelvin/301-old-mcdonald.git'
 # here's the list of possible columns to choose from.
 list_of_columns =['total exports', 'beef', 'pork', 'poultry',
        'dairy', 'fruits fresh', 'fruits proc', 'total fruits', 'veggies fresh',
